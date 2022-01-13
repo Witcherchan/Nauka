@@ -1,0 +1,386 @@
+body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	text-align: center;
+	font-family: Georgia, FreeMono, "Courier New", "Times New Roman";
+	font-size: 4vw;
+	color: black;
+}
+ 
+/*author: Mateusz Rybus*/
+
+#menu a{
+	
+	color: black;
+	width: 10%;
+	font-size: 50%;
+	position: relative;
+	left: 30%;
+	top: 3%;
+	float: left;
+	text-decoration: none;
+	z-index: 100;
+
+}
+
+#inneStrony {
+	
+	width: 60%;
+	position: fixed;
+	left: 20.5%;
+	top: 10%;
+	
+}
+
+#inneStrony a {
+	
+	color: black;
+	text-decoration: none;
+	background: white;
+	width: 100%;
+	height: auto;
+	border: 5px solid gray;
+	
+}
+
+img.InneKodyClass {
+	
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+}
+
+a.Spring {
+	
+	background: #61f03a;
+	border: 5px solid #58d636;
+	
+}
+
+a.Summer {
+	
+	background: #ffff4d;
+	border: 5px solid #ffff00;
+	
+}
+
+
+a.Fall {
+	
+	background: #ffb366;
+	border: 5px solid #ff8000;
+	
+}
+
+
+a.Winter {
+	
+	background: #66ccff;
+	border: 5px solid #00aaff;
+	
+}
+
+.stickman {
+	
+	position: absolute;
+	left: 5%;
+	bottom: 20%;
+	z-index: 1;
+	height: 15%;
+	width: 7%;
+
+
+	animation-name: moveStickMan;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.lefthouse {
+	
+	position: absolute;
+	left: 5%;
+	bottom: 20%;
+	z-index: 2;
+	height: 30%;
+	width: 15%;
+		
+}
+
+.righthouse {
+	
+	position: absolute;
+	left: 80%;
+	bottom: 20%;
+	z-index: 2;
+	height: 30%;
+	width: 15%;
+		
+}
+
+.sun {
+	
+	width: 20%;
+	position: absolute;
+	bottom: 80%;
+	left: 5%;
+	
+	
+	animation-name: rotate;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.tree {
+	width: 15%;
+	height: 53%;
+	position: absolute;
+	bottom: 7%;
+	right: 30%;
+	z-index:3;
+}
+
+#bird.spring {
+	
+	height: 20%;
+	width: 10%;
+	position: absolute;
+	top: 7%;
+	right: 25%;
+	
+	animation-name: flyBirdSpring;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	
+}
+
+#bird.summer {
+	
+	height: 20%;
+	width: 10%;
+	position: absolute;
+	top:25%;
+	left: 25%;
+	
+	animation-name: flyBirdSummer;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	
+}
+
+#bird.fall {
+	
+	
+	width: 10%;
+	position: absolute;
+	top: 7%;
+	right: 28%;
+	
+	animation-name: flyBirdFall;
+	animation-duration: 0.62s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+	
+}
+
+.clouds {
+	
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -3%;
+	left: 0%;
+	z-index: 3;
+}
+
+#snowflake {
+	
+	width: 6%;
+	z-index: 25;
+	
+}
+
+.snowflake1 {
+	
+	position: absolute;
+	left: 5%;
+	top: 0%;
+	
+	animation-name: snowflake1;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.snowflake2 {
+	
+	position: absolute;
+	left: 24%;
+	top: 0%;
+	
+	animation-name: snowflake2;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.snowflake3 {
+	
+	position: absolute;
+	left: 50%;
+	top: 0%;
+	
+	animation-name: snowflake3;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.snowflake4 {
+	
+	position: absolute;
+	right: 17%;
+	top: 0%;
+	
+	animation-name: snowflake4;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+.snowflake5 {
+	
+	position: absolute;
+	right: 5%;
+	top: 0%;
+	
+	animation-name: snowflake5;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	
+}
+
+
+
+@keyframes moveStickMan {
+	
+	0% {left: 10%; bottom:20%;}
+	100% {left: 90%; bottom:20%;}
+	
+}
+
+@keyframes rotate {
+	
+	0% {transform:rotate(0deg);}
+	100% {transform:rotate(360deg);}
+	
+}
+
+@keyframes flyBird {
+	
+	0%	{right: 25%; top: 7%; transform:rotate(0deg);}
+	25% {top: 15%;transform:rotate(45deg);}
+	50%	{right: 10%; top: 7%; transform:rotate(0deg);}
+	75%	{top: 15%; transform:rotate(-45deg);}
+	100% {right: 25%; top: 7%; transform:rotate(0deg);}
+	
+}
+
+@keyframes flyBirdSpring {
+	
+	0%	{right: 25%; top: 7%; transform:rotate(0deg);}
+	25% {top: 15%;transform:rotate(45deg);}
+	50%	{right: 10%; top: 7%; transform:rotate(0deg);}
+	75%	{top: 15%; transform:rotate(-45deg);}
+	100% {right: 25%; top: 7%; transform:rotate(0deg);}
+	
+}
+
+@keyframes flyBirdSummer {
+	
+	0%	{left: 25%; top: 20%; transform:rotate(0deg);}
+	25% {top: 28%;transform:rotate(-45deg);}
+	50%	{left: 10%; top: 20%; transform:rotate(0deg);}
+	75%	{top: 28%; transform:rotate(45deg);}
+	100% {left: 25%; top: 20%; transform:rotate(0deg);}
+	
+}
+
+@keyframes flyBirdFall {
+	
+	0%	{right: 28%; top: 28%;}
+	50%	{right: 28%; top: 30%;}
+	100% {right: 28%; top: 28%;}
+	
+}
+
+@keyframes snowflake1 {
+	
+	0% {left: 4%; top: 0%; transform:rotate(0deg);}
+	20% {left: 5%; top: 15%; transform:rotate(80deg);}
+	40% {left: 6%; top: 30%; transform:rotate(160deg);}
+	60% {left: 5%; top: 45%; transform:rotate(240deg); opacity: 0.5;}
+	80% {left: 4%; top: 60%; transform:rotate(320deg); opacity: 0;}
+	100% {left: 5%; top: 75%; transform:rotate(400deg); opacity: 0;}
+	
+	
+}
+
+@keyframes snowflake2 {
+	
+	0% {left: 24%; top: 0%; transform:rotate(0deg);}
+	20% {left: 25%; top: 15%; transform:rotate(80deg);}
+	40% {left: 26%; top: 30%; transform:rotate(160deg);}
+	60% {left: 25%; top: 45%; transform:rotate(240deg); opacity: 0.5;}
+	80% {left: 24%; top: 60%; transform:rotate(320deg); opacity: 0;}
+	100% {left: 25%; top: 75%; transform:rotate(400deg); opacity: 0;}
+	
+	
+}
+
+@keyframes snowflake3 {
+	
+	0% {left: 49%; top: 0%; transform:rotate(0deg);}
+	20% {left: 50%; top: 15%; transform:rotate(80deg);}
+	40% {left: 51%; top: 30%; transform:rotate(160deg);}
+	60% {left: 50%; top: 45%; transform:rotate(240deg); opacity: 0.5;}
+	80% {left: 49%; top: 60%; transform:rotate(320deg); opacity: 0;}
+	100% {left: 50%; top: 75%; transform:rotate(400deg); opacity: 0;}
+	
+	
+}
+
+@keyframes snowflake4 {
+	
+	0% {right: 17%; top: 0%; transform:rotate(0deg);}
+	20% {right: 18%; top: 15%; transform:rotate(80deg);}
+	40% {right: 19%; top: 30%; transform:rotate(160deg);}
+	60% {right: 18%; top: 45%; transform:rotate(240deg); opacity: 0.5;}
+	80% {right: 17%; top: 60%; transform:rotate(320deg); opacity: 0;}
+	100% {right: 18%; top: 75%; transform:rotate(400deg); opacity: 0;}
+	
+	
+}
+
+@keyframes snowflake5 {
+	
+	0% {right: 4%; top: 0%; transform:rotate(0deg);}
+	20% {right: 5%; top: 15%; transform:rotate(80deg);}
+	40% {right: 6%; top: 30%; transform:rotate(160deg);}
+	60% {right: 5%; top: 45%; transform:rotate(240deg); opacity: 0.5;}
+	80% {right: 4%; top: 60%; transform:rotate(320deg); opacity: 0;}
+	100% {right: 5%; top: 75%; transform:rotate(400deg); opacity: 0;}
+	
+	
+}
