@@ -1,0 +1,30 @@
+body{
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+	text-align: center;
+	font-family: Georgia, FreeMono, "Courier New", "Times New Roman";
+	font-size: 3vw;
+	color: black;
+}
+ 
+/*author: Mateusz Rybus*/
+
+#inneStrony a {
+	
+	color: black;
+	text-decoration: none;
+	background: white;
+	width: 125%;
+	height: auto;
+	border: 4px solid gray;
+	
+}
+
+#inneStrony {
+	
+	width: 60%;
+	position: fixed;
+	left: 20.5%;
+	
+}
