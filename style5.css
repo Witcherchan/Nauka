@@ -24,7 +24,7 @@ body{
 #inneStrony {
 	
 	width: 60%;
-	position: fixed;
-	left: 20.5%;
+	text-align: center;
+	display: inline-block
 	
 }
